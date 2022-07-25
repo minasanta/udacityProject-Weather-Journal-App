@@ -1,4 +1,3 @@
-/* Global Variables */
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -23,6 +22,8 @@ function generateData() {
             //Update the UI
             let temp = data.main.temp;
             let tempbyC = ((temp - 32) * (5 / 9)).toFixed(2); //convert to Celsius
+            const title = document.querySelector('.title');
+            title.innerHTML = `<h2>The country is <span class="important-title">${data.name}</span></h2>`;
             document.getElementById('date').textContent = newDate;
             document.getElementById('temp').textContent = `${tempbyC}℃`;
             document.getElementById('userResponse').textContent = feelings;
