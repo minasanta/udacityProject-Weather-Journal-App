@@ -5,7 +5,7 @@ let d = new Date();
 let newDate = d.toDateString();
 
 // Personal API Key for OpenWeatherMap API, URL
-const apiKey = ",&appid=c79c656383a6233b5f1ebc7f9780ffc6";
+const apiKey = ",&appid=c79c656383a6233b5f1ebc7f9780ffc6&units=imperial";
 
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip="
 
