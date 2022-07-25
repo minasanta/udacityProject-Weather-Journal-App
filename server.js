@@ -20,10 +20,10 @@ app.use(cors());
 app.use(express.static('website'));
 
 // GET route that returns the projectDat
-app.get('/all',(req,res)=> {res.send(projectData)});
+app.get('/all', (req, res) => { res.send(projectData) });
 
 // POST route that adds incoming data to projectData
-app.post('/add',(req,res)=> {
+app.post('/add', (req, res) => {
     projectData["temperature"] = req.body.temperature;
     projectData["temp"] = req.body.temp;
     projectData["userResponse"] = req.body.userResponse;
@@ -32,4 +32,4 @@ app.post('/add',(req,res)=> {
 
 // Setup Server
 const port = 8000;
-const server = app.listen(port, ()=> {console.log(`The local server at ${port}`);});
+const server = app.listen(port, () => { console.log(`The local server at ${port}`); });
