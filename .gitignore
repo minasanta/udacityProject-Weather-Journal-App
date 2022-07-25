@@ -1,1 +1,3 @@
 *.docx
+*.json
+node_modules/
