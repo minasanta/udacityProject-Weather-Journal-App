@@ -24,12 +24,13 @@ app.get('/all', (req, res) => { res.send(projectData) });
 
 // POST route that adds incoming data to projectData
 app.post('/add', (req, res) => {
-    projectData["temperature"] = req.body.temperature;
-    projectData["temp"] = req.body.temp;
-    projectData["userResponse"] = req.body.userResponse;
+    projectData["temperature"] = req.body.temp;
+    projectData["date"] = req.body.date;
+    projectData["userResponse"] = req.body.feelings;
+    console.log(projectData); // to see the data in the TERMINAL
     res.send(projectData);
 });
 
 // Setup Server
 const port = 8000;
-const server = app.listen(port, () => { console.log(`The local server at ${port}`); });
+const server = app.listen(port, () => { console.log(`The local server at localhost:${port}`); });
